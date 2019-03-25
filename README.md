@@ -37,7 +37,7 @@ cd
 现在，每分钟会执行一次
 
 ```shell
-/root/ddnspod/ddnspod.sh &>> /root/ddns.log
+/usr/local/ddnspod/ddnspod.sh &>> /root/ddns.log/ddnspod/ddnspod.sh &>> /root/ddns.log
 ```
 
 从而检查公网ip，自动修改A记录指向该nat机器的公网ip。可以通过`tailf /var/log/cron`命令查看crontab定时任务的运行情况。
