@@ -18,6 +18,7 @@ case $(uname) in
 	        extip=$(ip -o -4 addr list | grep -Ev '\s(docker|lo)' | awk '{print $4}' | cut -d/ -f1 )
         fi
 	# 从360的api获取nat的真实公网ip
+	# extip=`curl http://whatismyip.akamai.com`
 	extip=$(wget -qO- http://ip.360.cn/IPShare/info |grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}")
         echo $extip
     }
