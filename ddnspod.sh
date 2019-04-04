@@ -199,7 +199,7 @@ arDdnsCheck() {
         if [ "$lastIP" != "$hostIP" ]; then
             postRS=$(arDdnsUpdate $1 $2)
             if [ $? -eq 0 ]; then
-                echo "postRS: ${postRS}"
+                echo "postRS: ${postRS}  @$(date)"
                 return 0
             else
                 echo ${postRS}
